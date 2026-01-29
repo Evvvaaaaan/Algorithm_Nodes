@@ -4,19 +4,17 @@ lists = []
 
 
 n = int(input())
+cnt = 0
 
 for i in range(1, n+1):
-    i = str(i)
-    sum = 0
-    for j in range(len(i)):
-        sum += int(i[j])
+    s = str(i)
+    total = 0
+    
+    
+    for char in s:
+        total += int(char)
 
-    if int(i) % sum == 0:
+    if i % total == 0:
+        cnt += 1
         
-        lists.append(i)
-
-print(len(lists))
-
-
-
-
+print(cnt)
